@@ -3,20 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Welcome to My Village</title>
-  <!-- Link to the static CSS file -->
+  <title>My Village</title>
+  <!-- ✅ Correct way to link static CSS in Flask -->
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-
   <header>
     <h1>Welcome to My Village</h1>
     <p>A place of peace, nature, and tradition</p>
   </header>
 
   <section class="hero">
-    <!-- village.jpeg (check your static/images folder) -->
-    <img src="{{ url_for('static', filename='images/village.jpeg') }}" alt="Beautiful Village" />
+    <!-- ✅ Use Flask's url_for to reference static image -->
+    <img src="{{ url_for('static', filename='images/village.jpg') }}" alt="Beautiful Village" />
   </section>
 
   <section class="content">
@@ -38,6 +37,5 @@
   <footer>
     <p>&copy; 2025 My Village. All rights reserved.</p>
   </footer>
-
 </body>
 </html>
